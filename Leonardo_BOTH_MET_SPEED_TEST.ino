@@ -44,7 +44,7 @@ void intTime(void){
 
 void intEnc(){
   unsigned long thisTime = micros();
-  if( thisTime-oldTime>65535) {dt = 65353;}else{dt = thisTime - oldTime;}
+  if( thisTime-oldTime>65535) {dt = 65535;}else{dt = thisTime - oldTime;}
   oldTime = thisTime;
   if ( digitalRead(INT_DIR_PIN) ) {
     enc++;
