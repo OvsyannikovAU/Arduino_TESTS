@@ -13,7 +13,7 @@
 
 volatile long enc = 0;
 volatile word dt = 65535;
-volatile long dE = 0;
+volatile long dF = 0;
 volatile float w_timer = 0.0f;
 volatile float w_interrupt = 0.0f;
 volatile unsigned long oldTime = 0;
@@ -37,9 +37,9 @@ void setup() {
 
 void intTime(void){
   long thisEnc=enc;
-  dE=thisEnc-oldEnc;
+  dF=thisEnc-oldEnc;
   oldEnc=thisEnc;
-  w_timer=(360.0f*1000000.0f*dE)/(REDUCTION*IPR*TIMER_PERIOD);
+  w_timer=(360.0f*1000000.0f*dF)/(REDUCTION*IPR*TIMER_PERIOD);
 }
 
 void intEnc(){
