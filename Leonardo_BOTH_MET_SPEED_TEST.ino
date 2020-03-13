@@ -6,7 +6,7 @@
 #define INT_PIN 3
 #define INT_DIR_PIN 4
 #define IPR 12 //impuls per rotation
-#define REDUCTION 46.85
+#define REDUCTION 74.83
 #define NOM_SPD 100 //RPM - Rotation per Minute
 #define MAX_SPD NOM_SPD*6 //DPS - Degrees per Second
 #define TIMER_PERIOD 50000
